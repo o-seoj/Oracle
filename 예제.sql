@@ -363,19 +363,19 @@ select ename, RTRIM(ename, 'R') "RTRIM"
     from emp
     where deptno = 10;
 
--- 교재 P84
+-- 교재 p84
 SELECT ENAME, REPLACE(ENAME, SUBSTR(ENAME, 1, 2), '**') "REPLACE"
     FROM EMP
     WHERE DEPTNO = 10;
 
--- 교재 P86
+-- 교재 p86
 //반올림
 SELECT ROUND(987.654, 2) "ROUND1",
         ROUND(987.654, 0) "ROUND2",
         ROUND(987.654, -1) "ROUND3"
     FROM DUAL;
 
--- 교재 P87
+-- 교재 p87
 //버림
 SELECT TRUNC(987.654, 2) "TRUNC1",
         TRUNC(987.654, 0) "TRUNC2",
@@ -388,7 +388,7 @@ SELECT MOD(121,10) "MOD",
     FLOOR(123.45) "FLOOR"
 FROM DUAL;
 
--- 교재 P88
+-- 교재 p88
 SET PAGESIZE 50
 SELECT ROWNUM "ROWNO", CEIL(ROWNUM/3) "TEAMNO", ENAME
     FROM EMP;
