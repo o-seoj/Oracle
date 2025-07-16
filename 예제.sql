@@ -1,4 +1,4 @@
--- 교재 p26
+                       -- 교재 p26
 select * from emp;
 
 -- 교재 p27
@@ -179,3 +179,81 @@ select empno, ename, sal from emp where empno = &empno;
 
 set verity off 
 select empno, ename, sal from emp where empno = &empno;
+
+-- 교재 p56
+select empno, ename from &table where sal = 3000;
+
+-- 교재 p57
+select ename, sal, hiredate from emp;
+
+select ename, sal, hiredate from emp order by ename;
+
+-- 교재 p58
+select deptno, sal, ename from emp order by deptno asc, sal desc;
+
+select ename, sal, hiredate from emp where sal>1000 order by 2,1;
+
+-- 교재 p60
+select studno, name, deptno1, 1 
+    from student
+    where deptno1=101
+    union all 
+    select profno, name, deptno, 2
+    from professor
+    where deptno=101;
+    
+-- 교재 p61
+select studno, name, deptno1, 1
+    from student
+    where deptno1 = 101
+    union
+    select profno, name, deptno, 2
+    from professor
+    where deptno = 101;
+    
+select studno, name
+    from student
+    where deptno1 = 101
+    union
+    select studno, name
+    from student
+    where deptno2 = 201;
+
+select studno, name
+    from student
+    where deptno1 = 101
+    union all
+    select studno, name
+    from student
+    where deptno2 = 201;
+
+-- 교재 p63
+select studno, name
+    from student
+    where deptno1 = 101
+    intersect
+    select studno, name
+    from student
+    where deptno2 = 201;
+
+select empno, ename, sal
+    from emp
+    minus
+    select empno, ename, sal
+    from emp
+    where sal >2500;
+    
+-- 교재 p64
+select studno, name
+    from student
+    union
+    select profno
+    form professor;
+//select 절의 컬럼 개수가 다를 경우 발생 에러
+
+select studno, name
+    from student
+    union
+    select name, profno
+    form professor;
+//select절의 컬럼의 데이터 타입이 다를 경우 발생 에러
