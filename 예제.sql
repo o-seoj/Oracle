@@ -1,4 +1,4 @@
-                       -- 교재 p26
+-- 교재 p26
 select * from emp;
 
 -- 교재 p27
@@ -257,3 +257,138 @@ select studno, name
     select name, profno
     form professor;
 //select절의 컬럼의 데이터 타입이 다를 경우 발생 에러
+
+-- 교재 p71
+//INITCAP()함수 - 영어에서 첫 글자만 대문자로 출력하고 나머지는 전부 소문자로 출력
+select ename, initcap(ename) "initcap" 
+    from emp
+    where deptno=10;
+
+select name, initcap(name) "initcap"
+    from professor
+    where deptno = 101;
+    //중간에 공백이 있을 경우 공백 다음을 첫 글자로 생각해서 대문자로 출력
+
+-- 교재 p72
+select ename, lower(ename) "lower", upper(ename) "upper"
+    from emp
+    where deptno = 10;
+
+-- 교재 p73
+select ename, length(ename) "length", lengthb(ename) "length"
+    from emp
+    where deptno = 20;
+
+select '서진수' "name", length('서진수') "length", lengthb('서진수') "lengthb"
+    from dual;
+//영어일 경우 값 동일 but 한글일 경우는 다름. 책 3 6 -> 실제 실습 결과는 3 9가 나옴
+
+-- 교재 p74
+set verify off
+select ename, length(ename)
+    from emp
+    where length(ename)>length('&ename');
+//회원 가입 시 사용자 입력한 글자 수 확인
+
+select concat(ename, job)
+    from emp
+    where deptno = 10;
+    
+-- 교재 p75
+col "3, 2" for a6
+col "-3, 2" for a6
+col "-3, 4" for a6
+select substr('abcde', 3, 2) "3,2",
+        substr('abcde', -3, 2) "-3,2",
+        substr('abcde', -3, 4) "-3,4"
+        from dual;
+//마이너스 x -> 왼쪽에서 오른쪽으로 검색, o -> 오른쪽에서 왼쪽 검색 후 왼쪽에서 오른쪽 검색
+//활용: 생일 하루 전 문자, 생일 전 주변사람들에서 생일 다가온다 표시 등
+//자릿수부터 몇자를 추출
+
+-- 교재 p76
+select name, substr(jumin, 3, 4) "Birthday",
+            substr(jumin, 3, 4) -1 "Birthday -1"
+        from student
+        where deptno1 = 101;
+
+select '서진수' "name", substr('서진수', 1, 2) "substr", substrb('서진수',1,3) "substrb"
+    from dual;
+
+-- 교재 p77
+//instr('문자열'또는 컬럼, 찾는 글자, 시작 위치, 몇 번째인지(기본값은 1))
+select 'a-b-c-d', instr('a-b-c-d','-',1,3) "instr"
+    from dual;
+
+select 'a-b-c-d', instr('a-b-c-d','-',3,1) "instr"
+    from dual;
+
+select 'a-b-c-d', instr('a-b-c-d','-',-1,3) "instr"
+    from dual;
+
+-- 교재 p78
+select 'a-b-c-d', instr('a-b-c-d','-',-1,3) "instr"
+    from dual;
+
+select 'a-b-c-d', instr('a-b-c-d','-',-6,2) "instr"
+    from dual;
+
+select name, tel, instr(tel, ')')
+    from student
+    where deptno1 = 201;
+
+-- 교재 p79
+select name, tel, instr(tel, '3')
+    from student
+    where deptno1 = 101;
+
+-- 교재 p80
+col name for a20
+col id for a10
+col lpad(id,10,'*') for a20
+select name, id, lpad(id,10,'*')
+    from student
+    where deptno1 = 201;
+
+-- 교재 p82
+select ename from emp
+    where deptno = 10;
+    
+select ltrim(ename,'C')
+    from emp
+    where deptno = 10;
+    
+-- 교재 p83
+select ename, RTRIM(ename, 'R') "RTRIM"
+    from emp
+    where deptno = 10;
+
+-- 교재 P84
+SELECT ENAME, REPLACE(ENAME, SUBSTR(ENAME, 1, 2), '**') "REPLACE"
+    FROM EMP
+    WHERE DEPTNO = 10;
+
+-- 교재 P86
+//반올림
+SELECT ROUND(987.654, 2) "ROUND1",
+        ROUND(987.654, 0) "ROUND2",
+        ROUND(987.654, -1) "ROUND3"
+    FROM DUAL;
+
+-- 교재 P87
+//버림
+SELECT TRUNC(987.654, 2) "TRUNC1",
+        TRUNC(987.654, 0) "TRUNC2",
+        TRUNC(987.654, -1) "TRUNC3"
+    FROM DUAL;
+
+//MOD 나머지, CEIL 주어진 숫자가 가장 가까운 큰 정수, FLOOR 주어진 함수와 가장 가까운 작은 정수
+SELECT MOD(121,10) "MOD",
+    CEIL(123.5) "CEIL",
+    FLOOR(123.45) "FLOOR"
+FROM DUAL;
+
+-- 교재 P88
+SET PAGESIZE 50
+SELECT ROWNUM "ROWNO", CEIL(ROWNUM/3) "TEAMNO", ENAME
+    FROM EMP;
