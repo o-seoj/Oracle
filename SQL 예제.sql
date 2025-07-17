@@ -425,6 +425,81 @@ select sysdate, months_between('15/05/31','15/04/30') from dual;
 -- 교재 p95
 select ename, hiredate,
     round(months_between(to_date('04/05/31'), hiredate),1) "DATE1",
-    round((to_date('04/05/31') - hiredate)/31),1) "DATE2"
-from emp
-where deptno = 10;
+    round(((to_date('04/05/31') - hiredate)/31),1) "DATE2"
+    from emp
+    where deptno = 10;
+
+-- 교재 p96
+//주어진 날짜에 숫자만큼 달 추가
+select sysdate, add_months(sysdate,1) from dual;
+
+//주어진 날짜를 기준으로 돌아오는 가장 최근 요일의 날짜를 반환
+select sysdate, next_day(sysdate, '월') from dual;
+
+-- 교재 p97
+//특정 날짜 기준 돌아오는 요일의 날짜
+select sysdate, next_day('14/05/01', '월') from dual;
+
+//주어진 날짜가 속한 달의 가장 마지막 날을 출력
+select sysdate, last_day(sysdate), last_day('14/05/01') from dual;
+
+-- 교재 p98
+// 하루의 반에 해당되는 시간은 낮(정오) 12:00:00이므로 이 시간의 round() 작업은 주어진 날자가 이 시간을 넘어설 경우 다음 날짜로 출력하고 이 시간이 안 될 경우에는 당일로 출력
+// 반면 trunc()함수는 무조건 당일로 출력
+alter session set nls_date_format = 'yyyy-mm-dd:hh24:mi:ss';
+select sysdate, round(sysdate), trunc(sysdate) from dual;
+
+-- 교재 p100
+//자동 형 변환
+select 2 + '2' from dual;
+
+-- 교재 p100
+//묵시적 형 변환 : 숫자처럼 생긴 문자만 변환 나머지는 에러
+select 2 + TO_NUMBEr('2') from dual;
+select 2 + 'A' from dual; --에러
+
+-- 교재 p103
+//to_char(원래 날짜, '원하는 모양')
+select sysdate, to_char(sysdate, 'yyyy') "yyyy",
+    to_char(sysdate, 'rrrr') "rrrr",
+    to_char(sysdate, 'yy') "yy",
+    to_char(sysdate, 'rr') "rr",
+    to_char(sysdate, 'year') "year" --연도의 영문 이름 전체 표시
+from dual;
+
+select sysdate, to_char(sysdate, 'mm') "mm", -- 월 숫자 2자리
+    to_char(sysdate, 'mon') "mon", --MONTH와 동일 ex)10월
+    to_char(sysdate, 'month') "month"
+from dual;
+
+-- 교재 p104
+select sysdate, to_char(sysdate, 'dd') "dd", -- 일 숫자 2자리
+    to_char(sysdate, 'day') "day", -- 해당 요일 명칭
+    to_char(sysdate, 'ddth') "ddth" -- 몇 번째 날
+from dual;
+
+-- 교재 p105
+select sysdate, to_char(sysdate, 'rrrr-mm-dd:hh24:mi:ss') from dual;
+
+-- 교재 p107
+select empno, ename, sal, comm, to_char((sal*12)+comm, '999,999') "salary" from emp where ename = 'ALLEN';
+select name, pay, bonus, to_char((pay*12)+bonus, '999,999') "total" from professor where deptno = 201;
+
+-- 교재 p108
+//숫자가 아닌 숫자처럼 생긴 문자를 숫자로 바꿈
+select to_number('5') from dual;
+select to_number('A') from dual; -- 에러
+select ascii('A') from dual; -- 문자를 아스키 코드 값으로 출력
+
+-- 교재 p110
+//날짜가 아닌 날짜처럼 생긴 문자를 날짜로 바꿈
+select to_date('14/05/31') from dual;
+select to_date('2014/05/31') from dual;
+
+-- 교재 p111
+//NVL(컬럼, 치환할 값) 컬럼 값이 null일 경우 치환할 값으로 치환 시킨다.
+select ename, comm, nvl(comm,0), nvl(comm,100) from emp where deptno=30;
+
+-- 교재 p112
+//NVL2(col1, col2, col3) col1의 값이 null이 아니면 col2를, null이면 col3를 출력
+select empno, ename, sal, comm, nvl2(comm, sal+comm, sal*0) "NVL2" from emp where deptno=30;
