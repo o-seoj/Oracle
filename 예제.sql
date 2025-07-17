@@ -343,6 +343,7 @@ select name, tel, instr(tel, '3')
     where deptno1 = 101;
 
 -- 교재 p80
+//LPAD('문자열' or 컬럼명 자릿수, '채울문자')
 col name for a20
 col id for a10
 col lpad(id,10,'*') for a20
@@ -353,7 +354,8 @@ select name, id, lpad(id,10,'*')
 -- 교재 p82
 select ename from emp
     where deptno = 10;
-    
+
+//LTIM('문자열' or 컬럼명, '제거할 문자')  
 select ltrim(ename,'C')
     from emp
     where deptno = 10;
@@ -392,3 +394,37 @@ FROM DUAL;
 SET PAGESIZE 50
 SELECT ROWNUM "ROWNO", CEIL(ROWNUM/3) "TEAMNO", ENAME
     FROM EMP;
+
+SELECT POWER(2,3) FROM DUAL;
+
+-- 교재 p90
+select sysdate from dual;
+
+-- 교재 p91
+//두 날짜 중 큰 날짜를 먼저 써야 양수가 나옴 아니면 음수
+select months_between('14/09/30','14/08/31') from dual;
+
+-- 교재 p92
+select months_between('14/08/31','14/09/30') from dual;
+
+//같은 달에 속해 있으면 특정 규칙으로 계산된 값 나옴
+select months_between('12/02/29','12/02/01') from dual;
+select months_between('14/04/30','14/04/01') from dual;
+
+-- 교재 p93
+select months_between('14/05/31', '14/05/01') from dual;
+//2월이 28일까지 있는 달과 29일(윤일)까지 있는 달은 구분 X
+select months_between('12/03/01', '12/02/28') from dual;
+select months_between('14/03/01', '14/02/28') from dual;
+
+-- 교재 p94
+//날짜 형태를 지정
+alter session set nls_date_format='yy/mm/dd';
+select sysdate, months_between('15/05/31','15/04/30') from dual;
+
+-- 교재 p95
+select ename, hiredate,
+    round(months_between(to_date('04/05/31'), hiredate),1) "DATE1",
+    round((to_date('04/05/31') - hiredate)/31),1) "DATE2"
+from emp
+where deptno = 10;
