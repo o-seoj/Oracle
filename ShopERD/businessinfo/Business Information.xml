@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="8889E22E-2140-AA3F-A368-C86C77B9DE6D">
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="33D0923F-CF92-C862-B475-89359C427F0F">
 <createdBy>GGG</createdBy>
-<createdTime>2025-08-11 00:39:18 UTC</createdTime>
+<createdTime>2025-08-11 00:39:15 UTC</createdTime>
 <ownerDesignName>ShopERD</ownerDesignName>
 <shouldBeOpen>false</shouldBeOpen>
 </BusinessInfoDesign>

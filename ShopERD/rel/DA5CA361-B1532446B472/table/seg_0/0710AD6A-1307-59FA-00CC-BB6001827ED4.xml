@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0710AD6A-1307-59FA-00CC-BB6001827ED4" name="Product">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 00:46:56 UTC</createdTime>
+<ownerDesignName>shopERD</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="prodNo" id="9D01A419-305F-7556-4471-6681B6E2F346">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 00:47:58 UTC</createdTime>
+<ownerDesignName>shopERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prodName" id="B08B65C0-0527-E84B-0907-8A93E08F0C58">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 00:47:58 UTC</createdTime>
+<ownerDesignName>shopERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stock" id="0B66E912-1E66-4A61-E79D-549749FE8EBC">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 00:47:58 UTC</createdTime>
+<ownerDesignName>shopERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="8C6CDBD0-9763-C584-8209-37AF3E289470">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 00:47:58 UTC</createdTime>
+<ownerDesignName>shopERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="company" id="C4335849-A3E6-44B4-6367-111E44880478">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 00:47:58 UTC</createdTime>
+<ownerDesignName>shopERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A495C925-97BF-FE5C-C6AD-08952AC4658A" name="Product_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 00:47:58 UTC</createdTime>
+<ownerDesignName>shopERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D01A419-305F-7556-4471-6681B6E2F346"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

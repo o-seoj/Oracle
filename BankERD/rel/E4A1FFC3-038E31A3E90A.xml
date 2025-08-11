@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="E4A1FFC3-FFD2-A3EE-87F0-038E31A3E90A" mainViewID="2BA972FE-BEBD-BC32-DACF-067F3B5085C5">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 02:07:35 UTC</createdTime>
+<ownerDesignName>BankERD</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>
