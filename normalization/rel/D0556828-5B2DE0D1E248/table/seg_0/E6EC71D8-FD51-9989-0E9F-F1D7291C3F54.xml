@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E6EC71D8-FD51-9989-0E9F-F1D7291C3F54" name="Doctor">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:06:35 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="doc_id" id="DD74F6EB-5459-E349-9693-4E778FD40961">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="doc_name" id="5F0E2AEE-EDC9-A056-B4B9-8400D08F2347">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="doc_birth" id="346F21F0-A3C5-9DF1-B6FD-A55791541FB6">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="doc_gen" id="3FAD36E5-D0C1-0CBA-2F5E-C95C2EE68D42">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dep_no" id="26C54831-9905-7F23-2C02-A5280D710F02">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87A68A91-29FF-4043-A3BE-1BFC83F5C930" referredColumn="30D51257-D95A-B241-C983-D153AA04C0B1"/>
+</associations>
+</Column>
+<Column name="doc_pos" id="2FFAAAD0-4433-47E1-9C96-890E63A8CDB0">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="doc_phone" id="7D463AC2-94F9-BA93-FD02-E4551F2EF04F">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="doc_email" id="4AE29A49-439E-9615-012F-6957B0E2133C">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:07:10 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="45C8A10A-B226-3DCB-215A-C5307024FA48" name="Doctor_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:09:26 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD74F6EB-5459-E349-9693-4E778FD40961"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53D2B88F-EA2E-9500-6B41-A1DCE3CE531D" name="Doctor__UN">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:09:48 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D463AC2-94F9-BA93-FD02-E4551F2EF04F"/>
+<colUsage columnID="4AE29A49-439E-9615-012F-6957B0E2133C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A97DF10-51DF-65B9-D41A-F5B13D4A92D4" name="Doctor_Department_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:22:16 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26C54831-9905-7F23-2C02-A5280D710F02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

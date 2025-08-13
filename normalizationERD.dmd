@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="normalizationERD" id="727BBD71-AA72-C42F-CF2F-E06292D1F4E1" version="3.5">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 05:30:21 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>727BBD71-AA72-C42F-CF2F-E06292D1F4E1</designId>
+</OSDM_Design>

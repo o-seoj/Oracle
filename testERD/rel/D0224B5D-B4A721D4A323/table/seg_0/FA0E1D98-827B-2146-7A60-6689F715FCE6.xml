@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FA0E1D98-827B-2146-7A60-6689F715FCE6" name="Account">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:11:50 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="acc_id" id="057F7EEE-D58A-3DD2-76CC-9105EC9B40E0">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:19 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_jumin" id="70E0A876-9AC6-0D1D-7950-D5D1FCBAF9CC">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:19 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="655F5FF4-A703-F21C-CBE0-15A6E79F28DE" referredColumn="7FBF0C97-0CCD-AADF-50F6-8FCF40813E0F"/>
+</associations>
+</Column>
+<Column name="acc_type" id="A9D409AB-58E7-F090-92AB-4D16A52FC2EE">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:19 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_balance" id="BCA76A7D-0795-A484-8FFD-B1E2620586D4">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:19 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_card" id="547C45F4-6C9E-2CDB-8716-162515C63E12">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:19 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_register_date" id="5FB4A31F-65EC-14F9-C508-C4D2260DDDC4">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:19 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5781A532-C4FE-C29E-324F-4C94B326CD9E" name="Account_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:12:19 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="057F7EEE-D58A-3DD2-76CC-9105EC9B40E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62C78460-2CD2-1EA5-18A8-8204EBA2A0C1" name="Account_Customer_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:18:30 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70E0A876-9AC6-0D1D-7950-D5D1FCBAF9CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

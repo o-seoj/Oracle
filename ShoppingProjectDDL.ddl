@@ -73,12 +73,11 @@ ALTER TABLE product ADD CONSTRAINT product_pk PRIMARY KEY ( prodno );
 
 CREATE TABLE seller (
     sellerno NUMBER(5) NOT NULL,
-    tel      VARCHAR2(20 BYTE) NOT NULL,
-    manager  VARCHAR2(20 BYTE) NOT NULL,
-    address  VARCHAR2(100 BYTE) NOT NULL,
-    company  VARCHAR2(100 BYTE) NOT NULL
+    company  VARCHAR2(100) NOT NULL,
+    tel      VARCHAR2(20) NOT NULL,
+    manager  VARCHAR2(20) NOT NULL,
+    address  VARCHAR2(100) NOT NULL
 );
-
 ALTER TABLE seller ADD CONSTRAINT seller_pk PRIMARY KEY ( sellerno );
 
 CREATE TABLE "User" (
@@ -265,128 +264,78 @@ insert into Cart values (10, 'user6', 130101, 1, '2022-01-10 10:50:12');
 
 -- SQL 문제
 --문제1. 모든 장바구니 내역에서 고객명, 상품명, 상품수량을 조회하시오. 단 상품수량 2건이상만 조회 할 것
-SELECT 
-	name,
-	prodName,
-	cartProdCount
-FROM Cart a
+SELECT name, prodName, cartProdCount FROM Cart a
 JOIN "User" b ON a.userId = b.userId
 JOIN Product c ON a.prodNo = c.prodNo
 WHERE cartProdCount >= 2;
 
 
 --문제2. 모든 상품내역에서 상품번호, 상품카테고리명, 상품명, 상품가격, 판매자이름, 판매자 연락처를 조회하시오.
-SELECT 
-	prodNo,
-	cateName,
-	prodName,
-	prodPrice,
-	manager,
-	tel
-FROM Product a
+SELECT prodNo, cateName,prodName, prodPrice, manager, tel FROM Product a
 JOIN Category b ON a.cateNo = b.cateNo
 JOIN Seller c ON a.sellerNo = c.sellerNo;
 
 --문제3. 모든 고객의 아이디, 이름, 휴대폰, 현재포인트, 적립포인트 총합을 조회하시오. 단 적립포인트 내역이 없으면 0으로 출력
-SELECT 
-    a.userId,
-    a.name,
-    a.hp,
-    a.point,
-    NVL(SUM(b.point), 0) AS 적립포인트_총합
+SELECT a.userId, a.name, a.hp, a.point, NVL(SUM(b.point), 0) AS 적립포인트_총합
+FROM "User" a
+LEFT JOIN Point b ON a.userId = b.userId
+GROUP BY a.userId, a.name, a.hp, a.point;
+
+SELECT a.userId, a.name, a.hp, a.point, SUM(b.point) AS 적립포인트_총합
 FROM "User" a
 LEFT JOIN Point b ON a.userId = b.userId
 GROUP BY a.userId, a.name, a.hp, a.point;
 
 --문제4. 모든 주문의 주문번호, 주문자 아이디, 고객명, 주문가격, 주문일자를 조회하시오.
 --       단 주문금액에 10만원 이상, 큰 금액순으로 조회, 금액이 같으면 이름이 사전순으로 될것
-SELECT
-	a.orderNo,
-	a.userId,
-	b.name,
-	a.orderTotalPrice,
-	a.orderDate 
-FROM Orders a
+SELECT a.orderNo, a.userId, b.name, a.orderTotalPrice, a.orderDate FROM Orders a
 JOIN "User" b ON a.userId = b.userId
 WHERE orderTotalPrice >= 100000
 ORDER BY orderTotalPrice DESC, b.name ASC;
 
 --문제5. 모든 주문의 주문번호, 주문자 아이디, 고객명, 상품명, 주문일자를 조회하시오. 주문번호는 중복없이 상품명은 구분자 ,로 나열할것
-SELECT
-    a.orderNo,
-    MAX(c.userId) AS userId,
-    MAX(c.name) AS userName,
-    LISTAGG(d.prodName, ',') WITHIN GROUP (ORDER BY d.prodName) AS 상품명,
-    MAX(a.orderDate) AS orderDate
-FROM Orders a
-JOIN OrdersItem b ON a.orderNo = b.orderNo
-JOIN "User" c ON a.userId = c.userId
-JOIN Product d ON b.prodNo = d.prodNo
-GROUP BY a.orderNo;
-
-
-
+select a.orderNo, max(c.userId) as userID, max(c.name) as userName, 
+    listagg(d.prodName, ',') within group (order by d.prodName) as 상품명,
+    max(a.orderDate) as orderDate
+from orders a
+join ordersitem b on a.orderno = b.orderno
+join "User" c on a.userId = c.userId
+join product d on b.prodno = d.prodno
+group by a.orderno;
 
 --문제6. 모든 상품의 상품번호, 상품명, 상품가격, 할인율, 할인된 가격을 조회하시오.
-SELECT 
-	prodNo,
-	prodName,
-	prodPrice,
-	prodDiscount,
-	FLOOR(prodPrice * (1 - prodDiscount / 100)) AS 할인가
-FROM Product a;
+select prodno, prodname, prodprice, proddiscount, floor(prodprice * (1-proddiscount/100)) as 할인가
+from product a;
 
 --문제7. 고소영 판매자가 판매하는 모든 상품의 상품번호, 상품명, 상품가격, 재고수량, 판매자이름을 조회하시오.
-SELECT 
-	a.prodNo,
-	a.prodName,
-	a.prodPrice,
-	a.prodStock,
-	b.manager
-FROM Product a
-JOIN Seller b ON a.sellerNo=b.sellerNo
-WHERE b.manager='고소영';
+select a.prodno, a.prodname, a.prodprice, b.manager from product a
+join seller b on a.sellerno=b.sellerno
+where b.manager='고소영';
 
 
 --문제8. 아직 상품을 판매하지 않은 판매자의 판매자번호, 판매자상호, 판매자 이름, 판매자 연락처를 조회하시오.
-SELECT 
-	a.sellerNo,
-	a.company,
-	a.manager,
-	a.tel
-FROM Seller a
-LEFT JOIN Product b ON a.sellerNo = b.sellerNo
-WHERE prodNo IS NULL;
-
+select a.sellerno, a.company, a.manager, a.tel from seller a
+left join product b on a.sellerno = b.sellerno
+where prodno is null;
 
 --문제9. 모든 주문상세내역 중 개별 상품 가격과 개수 그리고 할인율이 적용된 가격을 구하고 그 가격으로
 --       주문별 총합을 구해서 주문별 총합이 10만원이상 그리고 큰 금액 순으로 주문번호, 최종총합을 조회하시오. 
-SELECT 
-    orderNo,
-    SUM(할인가 * itemCount) AS 최종총합
-FROM (
-    SELECT 
-        orderNo,
-        itemPrice,
-        itemDiscount,
-        itemCount,
-        FLOOR(itemPrice * (1 - itemDiscount / 100) * itemCount) AS 할인가
-    FROM OrdersItem
+select orderno, sum(할인가*itemCount) as 최종총합
+from(
+    select orderno, itemprice, itemdiscount, itemcount, floor(itemprice*(1-itemdiscount/100)*itemcount) as 할인가
+    from ordersitem
 ) a
-GROUP BY orderNo
-HAVING SUM(할인가 * itemCount) >= 100000
-ORDER BY SUM(할인가 * itemCount) DESC;
-
+group by orderno
+having sum(할인가*itemcount)>=100000
+order by sum(할인가*itemcount)desc;
 
 
 --문제10. 장보고 고객이 주문했던 모든 상품명을 고객명, 상품명으로 조회하시오. 
 --        단 상품명은 중복 안됨, 상품명은 구분자 , 로 나열
-SELECT 
-    b.name,
-    LISTAGG(d.prodName, ',') WITHIN GROUP (ORDER BY d.prodName) AS 상품목록
-FROM Orders a
-JOIN "User" b ON a.userId = b.userId
-JOIN OrdersItem c ON a.orderNo = c.orderNo
-JOIN Product d ON d.prodNo = c.prodNo
-WHERE b.name = '장보고'
-GROUP BY b.name;
+select b.name, listagg(d.prodname, ',') within group (order by d.prodname) as 상품목록
+from orders a
+join "User" b on a.userid = b.userid
+join ordersitem c on a.orderno = c.orderno
+join product d on d.prodno = c.prodno
+where b.name='장보고'
+group by b.name;

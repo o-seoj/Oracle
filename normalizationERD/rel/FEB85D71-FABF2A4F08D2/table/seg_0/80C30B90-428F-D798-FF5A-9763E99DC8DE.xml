@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="80C30B90-428F-D798-FF5A-9763E99DC8DE" name="BO_OrderItem">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:24:54 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="orderNo1" id="8A701FDC-5801-3D61-3639-526C0C5975BF">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:28:11 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B72C32B5-6435-3B91-0326-40A756C09A28" referredColumn="5ECBF995-B3A7-6642-6B7F-45070EB0ACB5"/>
+</associations>
+</Column>
+<Column name="bookId1" id="6AAEAE78-C7C1-4E77-F7B0-465F48BEC683">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:26:49 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A63B3F6F-5830-599D-DBE7-68CE235AFDC5" referredColumn="AEF4FCA2-78CA-0948-194F-20A30EFE3921"/>
+</associations>
+</Column>
+<Column name="count" id="A6E5F2CF-4975-DB84-916B-35303E59A260">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:25:53 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="7A4913E0-DB42-6975-A088-E09548668435">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:24:54 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C0D94703-07E1-6F96-B5EF-2BDE4DFEBB7A" name="BO_Order3v1_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:24:54 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A701FDC-5801-3D61-3639-526C0C5975BF"/>
+<colUsage columnID="6AAEAE78-C7C1-4E77-F7B0-465F48BEC683"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A2DAF409-9D50-D89B-ABAE-327B1DE0F102" name="BO_OrderItem_BO_Book3_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:26:49 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AAEAE78-C7C1-4E77-F7B0-465F48BEC683"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F5CD23DA-AEF2-9C76-91EA-311302DA5B79" name="BO_OrderItem_BO_Order3_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 06:28:11 UTC</createdTime>
+<ownerDesignName>normalizationERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A701FDC-5801-3D61-3639-526C0C5975BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

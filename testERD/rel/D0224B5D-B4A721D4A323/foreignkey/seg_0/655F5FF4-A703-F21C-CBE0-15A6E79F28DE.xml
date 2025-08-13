@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="655F5FF4-A703-F21C-CBE0-15A6E79F28DE" containerWithKeyObject="FA0E1D98-827B-2146-7A60-6689F715FCE6" localFKIndex="62C78460-2CD2-1EA5-18A8-8204EBA2A0C1" name="Account_Customer_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:18:30 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<referredTableLongName>Customer</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>563DF9C1-2731-E69A-28A6-3BF1A2027D2F</referredTableID>
+<keyObject>98A39821-AE4A-BCC7-6E6F-FFEE6DD73082</keyObject>
+<referredKeyID>98A39821-AE4A-BCC7-6E6F-FFEE6DD73082</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>cust_jumin</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

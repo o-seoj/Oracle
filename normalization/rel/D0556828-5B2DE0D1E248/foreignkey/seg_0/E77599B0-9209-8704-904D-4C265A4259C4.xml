@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E77599B0-9209-8704-904D-4C265A4259C4" containerWithKeyObject="80FD5C29-50AC-E900-3EA9-B7AE70B5BF76" localFKIndex="003A3F48-B6DF-0C09-A2BE-9E010BE78E57" name="Chart_Treatment_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 03:02:53 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<referredTableLongName>Treatment</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BD847D21-BA0E-73DD-BB14-4546335BD373</referredTableID>
+<keyObject>FB583FED-6615-792C-BC0B-3C7D8D03FCDA</keyObject>
+<referredKeyID>FB583FED-6615-792C-BC0B-3C7D8D03FCDA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>treat_no,doc_id,pat_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

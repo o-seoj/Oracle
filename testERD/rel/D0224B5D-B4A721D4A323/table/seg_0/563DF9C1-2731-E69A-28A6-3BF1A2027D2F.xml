@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="563DF9C1-2731-E69A-28A6-3BF1A2027D2F" name="Customer">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:00 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_jumin" id="7FBF0C97-0CCD-AADF-50F6-8FCF40813E0F">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="966D7EED-858D-BC4A-819F-8C22F1BF3A67">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="4ABE7774-1013-52D0-EFF2-907D48346A71">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth" id="BAF746D9-B9C4-0050-30C1-CF2DD1D109B0">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="A4AA3AE3-9393-D67D-BFB3-0697ACE98C55">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hp" id="BD08ADC8-A460-1A6F-E82E-98E1846EF678">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="job" id="ADAFDD9E-1060-CABE-0C9C-3E9B711F9230">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="98A39821-AE4A-BCC7-6E6F-FFEE6DD73082" name="Customer_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:06:55 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FBF0C97-0CCD-AADF-50F6-8FCF40813E0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="849EDD29-3DF5-8698-E676-E4C4620EC89C" name="Customer__UN">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:09:02 UTC</createdTime>
+<ownerDesignName>testERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4AA3AE3-9393-D67D-BFB3-0697ACE98C55"/>
+<colUsage columnID="BD08ADC8-A460-1A6F-E82E-98E1846EF678"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

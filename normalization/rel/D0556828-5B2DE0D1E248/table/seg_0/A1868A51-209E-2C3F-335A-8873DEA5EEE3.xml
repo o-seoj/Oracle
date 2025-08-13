@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1868A51-209E-2C3F-335A-8873DEA5EEE3" name="Nurse">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:15:40 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nur_id" id="09B9C3E6-1F0F-5BE7-CB24-ADBC32E3040D">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_name" id="64DD3C36-062E-5B7A-4933-421C36CBB45E">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_birth" id="69D4AC76-F17E-1C07-0FAF-D2C304CC6B30">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_gender" id="87FEF33B-D23C-FDD4-0B8B-6EF5E12B293A">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dep_no" id="BDD5027A-A3B5-2BCA-3B24-EBF80797A236">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF644041-FD94-BFEF-52A3-597045CA4DE0" referredColumn="30D51257-D95A-B241-C983-D153AA04C0B1"/>
+</associations>
+</Column>
+<Column name="nur_pos" id="6BD4EE3F-D51B-12E7-5815-9EE7142B8419">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_phone" id="5144B75A-50AD-6FE6-45DA-8DF7AA02A254">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13 BYTE</dataTypeSize>
+<ownDataTypeParameters>13 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nur_email" id="A1EC1124-4B7F-2C4E-22A1-ACD934CF2F14">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="434A7EC3-9C71-86A9-D33E-264686054ABA" name="Nurse_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:16:09 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09B9C3E6-1F0F-5BE7-CB24-ADBC32E3040D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="113EE597-57A7-5D03-F377-B9DBE5D8B5E0" name="Nurse__UN">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:18:29 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5144B75A-50AD-6FE6-45DA-8DF7AA02A254"/>
+<colUsage columnID="A1EC1124-4B7F-2C4E-22A1-ACD934CF2F14"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E745E14-461E-B5C6-130D-05FC4CDFE9BA" name="Nurse_Department_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:26:51 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDD5027A-A3B5-2BCA-3B24-EBF80797A236"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

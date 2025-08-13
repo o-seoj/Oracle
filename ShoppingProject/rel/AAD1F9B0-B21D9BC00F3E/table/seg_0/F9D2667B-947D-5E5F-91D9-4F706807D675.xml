@@ -27,25 +27,10 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="920F8577-0D58-70D2-0128-48925425E8C5" referredColumn="6C523DF0-05CE-33EA-2718-20A04C0AB7B7"/>
-</associations>
-</Column>
-<Column name="sellerNo" id="DC7EDBB9-9CA2-7636-4D4F-BB9E25D0E0C7">
-<createdBy>GGG</createdBy>
-<createdTime>2025-08-11 06:31:45 UTC</createdTime>
-<ownerDesignName>ShoppingProject</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,5,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="F86795C8-DF2E-1FD3-FD4D-7B2AAAF6EB1E" referredColumn="67989D50-4B7B-25C2-A0F8-D743438F5AD9"/>
 </associations>
 </Column>
 <Column name="prodName" id="FDB80E89-67E1-0CB0-1EEE-1E15E3E1DBA4">
@@ -107,6 +92,21 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <defaultOntNull>true</defaultOntNull>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sellerNo" id="DC7EDBB9-9CA2-7636-4D4F-BB9E25D0E0C7">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:31:45 UTC</createdTime>
+<ownerDesignName>ShoppingProject</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F86795C8-DF2E-1FD3-FD4D-7B2AAAF6EB1E" referredColumn="67989D50-4B7B-25C2-A0F8-D743438F5AD9"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

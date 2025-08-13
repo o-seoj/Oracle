@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="80FD5C29-50AC-E900-3EA9-B7AE70B5BF76" name="Chart">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:20:08 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="chart_id" id="DAE616E1-0B1D-7B0D-E6B8-9983F0195C5F">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:21:00 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="treat_no" id="6078B493-8B0E-E68E-7A3D-58B1C6629666">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:21:00 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E77599B0-9209-8704-904D-4C265A4259C4" referredColumn="31F5FC1B-9CDE-1973-47F5-E8BAE26AB636"/>
+</associations>
+</Column>
+<Column name="doc_id" id="4D1D0656-66DE-7041-9CF9-6882EBCFD1CD">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:21:00 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E77599B0-9209-8704-904D-4C265A4259C4" referredColumn="702829FC-EFFE-0ED0-E7C0-87C7AEB01CB5"/>
+</associations>
+</Column>
+<Column name="pat_id" id="52C75281-EE84-968D-DB10-71A9BA11F7F1">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:21:00 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E77599B0-9209-8704-904D-4C265A4259C4" referredColumn="D4B14089-0140-E081-E668-1FF520D66E50"/>
+</associations>
+</Column>
+<Column name="chart_desc" id="7A853D07-4179-3961-A15C-316CBA86B522">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:21:00 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6353A82D-BBF6-39B3-92BD-EB24B44A6CBB" name="Chart_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:47:25 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DAE616E1-0B1D-7B0D-E6B8-9983F0195C5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="236F541C-A6CD-A858-8A61-FB0B7D16E287" name="Chart__UN">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 03:16:12 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6078B493-8B0E-E68E-7A3D-58B1C6629666"/>
+<colUsage columnID="4D1D0656-66DE-7041-9CF9-6882EBCFD1CD"/>
+<colUsage columnID="52C75281-EE84-968D-DB10-71A9BA11F7F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="003A3F48-B6DF-0C09-A2BE-9E010BE78E57" name="Chart_Treatment_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 03:02:53 UTC</createdTime>
+<ownerDesignName>normalization</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6078B493-8B0E-E68E-7A3D-58B1C6629666"/>
+<colUsage columnID="4D1D0656-66DE-7041-9CF9-6882EBCFD1CD"/>
+<colUsage columnID="52C75281-EE84-968D-DB10-71A9BA11F7F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
